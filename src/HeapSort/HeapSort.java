@@ -34,6 +34,8 @@ public class HeapSort {
                 //如果左右子节点中存在比当前节点大的值就交换节点值
                 if (datas[bigIndex] > datas[curr]) {
                     swap(datas, bigIndex, curr);
+                    //如果该节点还存在子字节点，就需要去比较子节点
+                    //没有这行代码也是可以的，只是退化成了直接交换排序
                     curr = bigIndex;
                 } else {
                     break;
