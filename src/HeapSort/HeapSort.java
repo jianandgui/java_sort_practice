@@ -2,6 +2,17 @@ package HeapSort;
 
 public class HeapSort {
 
+    /**
+     * 堆排序思想：
+     * 1、建堆
+     * 2、选出最大或者最小放在最后
+     * 通过不断的建堆，每次都将最大最小选出来，然后用
+     * 剩下的元素继续建堆，不断循环，其实也是一种选择排序
+     * 只是减少了比较次数相对于直接选择排序，树型结构可以
+     * 保留比较结果，不用重复比较
+     * @param datas
+     * @return
+     */
     public int[] heapSort(int[] datas) {
         int length = datas.length;
         for (int i = 0; i < length -1; i++) {
