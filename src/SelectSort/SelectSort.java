@@ -21,21 +21,17 @@ public class SelectSort {
         for (int i=0;i<data.length;i++) {
 
             int minIndex = i;
-
             for (int j=i+1;j<data.length;j++) {
                 if (data[minIndex] > data[j]) {
                     minIndex = j;
                 }
             }
-
             if (minIndex != i) {
                 int temp = data[minIndex];
                 data[minIndex] = data[i];
                 data[i] = temp;
             }
-
         }
-
         return data;
     }
 
