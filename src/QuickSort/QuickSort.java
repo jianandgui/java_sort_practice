@@ -28,7 +28,7 @@ public class QuickSort {
             int flag = datas[start];
 
             //如果i>j说明两边已经搜索完了
-            while (true) {
+            while (i < j) {
                 //i<end 是防止数组过界限制 不断的搜索比flag大的元素 找到就中止循环
                 while (i < end && datas[++i] <= flag) ;
                 while (j > start && datas[--j] >= flag) ;
@@ -36,8 +36,6 @@ public class QuickSort {
                 //还要判断是否j跑到了i的左边
                 if (i < j) {
                     swap(datas, i, j);
-                } else {
-                    break;
                 }
             }
             //交换flag和j的值
