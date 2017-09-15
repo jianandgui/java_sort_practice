@@ -44,7 +44,7 @@ public class QuickSort {
             swap(datas, start, j);
             //递归 依次查找flag左边 和右边 现在flag就是j
             quickSort(datas, start, j - 1);
-            quickSort(datas, j + i, end);
+            quickSort(datas, j + 1, end);
         }
         return datas;
         }
